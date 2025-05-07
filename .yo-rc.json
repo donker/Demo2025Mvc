@@ -1,0 +1,27 @@
+{
+  "generator-dotnetnuke": {
+    "promptValues": {
+      "projType": "react",
+      "dnnVersion": "10.0.0",
+      "npm": true,
+      "projectname": "Demo2025Mvc",
+      "projectdescription": "Demo2025Mvc module",
+      "yourname": "Peter Donker",
+      "email": "peter@bring2mind.net",
+      "companyfull": "Bring2mind",
+      "companyshort": "Bring2mind",
+      "companyUrl": "bring2mind.net",
+      "dnnHost": "http://dnndev.me",
+      "dnnRoot": "DL/",
+      "namespace": "Bring2mind.Demo2025Mvc",
+      "Name": "Demo1",
+      "Namespace": "Bring2mind.Demo2025Mvc.Demo2",
+      "ModuleName": "Demo1",
+      "ReactOptions": []
+    },
+    "Company": "Bring2mind",
+    "Project": "Demo2025Mvc",
+    "Namespace": "Bring2mind.Demo2025Mvc",
+    "Solution": "Bring2mind.Demo2025Mvc"
+  }
+}

@@ -1,0 +1,48 @@
+{
+  "name": "Bring2mind.Demo1",
+  "projectType": "module",
+  "friendlyName": "Demo1 Module",
+  "description": "Bring2mind Demo1 Module",
+  "packageName": "Bring2mind_Demo1",
+  "folder": "MVC/Bring2mind/Demo1",
+  "iconFile": "DesktopModules\\MVC\\Bring2mind\\Demo1\\icon.png",
+  "module": {
+    "azureCompatible": "true",
+    "moduleName": "Bring2mind_Demo1",
+    "foldername": "Bring2mind/Demo1",
+    "businessControllerClass": "Bring2mind.Demo2025Mvc.Demo1.Common.ModuleController, BRING2MIND.DEMO2025MVC.DEMO1",
+    "supportedFeatures": ["Portable"],
+    "moduleDefinitions": [
+      {
+        "friendlyName": "Bring2mind Demo1",
+        "defaultCacheTime": 0,
+        "moduleControls": [
+          {
+            "controlSrc": "Bring2mind.Demo2025Mvc.Demo1.Controllers/Home/Index.mvc",
+            "supportsPartialRendering": "False",
+            "controlTitle": "Demo1",
+            "controlType": "View",
+            "viewOrder": 0
+          },
+          {
+            "controlKey": "Settings",
+            "controlSrc": "Bring2mind.Demo2025Mvc.Demo1.Controllers/Settings/Settings.mvc",
+            "supportsPartialRendering": "False",
+            "controlTitle": "Demo1 Settings",
+            "controlType": "Edit",
+            "viewOrder": 0
+          }
+        ],
+        "permissions": [
+          { "code": "Bring2mind_Demo1_MODULE", "key": "CANDO", "name": "Does Stuff" }
+        ]
+      }
+    ]
+  },
+  "pathsAndFiles": {
+    "pathToAssemblies": "./bin",
+    "pathToScripts": "./Server/SqlScripts",
+    "assemblies": ["Bring2mind.Demo2025Mvc.Demo1.dll"],
+    "excludeFilter": ["Demo1/bin/", "Demo1/obj/"]
+  }
+}

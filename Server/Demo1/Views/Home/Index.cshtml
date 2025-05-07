@@ -1,0 +1,8 @@
+@inherits Demo1WebPage
+@using Bring2mind.Demo2025Mvc.Demo1.Common
+@{
+}
+
+<h1>Hello Demo1 Module</h1>
+
+<a href="@Url.Action("Index", "Foo", new { UserId = this.Dnn.User.UserID })">Go to detail page</a>
