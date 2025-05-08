@@ -10,8 +10,8 @@
     <Product>demo2025mvc</Product>
     <Copyright>Copyright 2025 by Bring2mind</Copyright>
     <PackageId>Bring2mind.Demo2025Mvc.Demo2</PackageId>
-    <AssemblyVersion>0.0.1</AssemblyVersion>
-    <FileVersion>0.0.1</FileVersion>
+    <AssemblyVersion>0.0.2</AssemblyVersion>
+    <FileVersion>0.0.2</FileVersion>
     <Description>Demo2025Mvc module</Description>
     <NeutralLanguage>en-US</NeutralLanguage>
     <ApplicationIcon />
@@ -30,6 +30,9 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <Reference Include="DotNetNuke.Web.MvcPipeline">
+      <HintPath>..\..\Ref\DotNetNuke.Web.MvcPipeline.dll</HintPath>
+    </Reference>
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Web" />
   </ItemGroup>
