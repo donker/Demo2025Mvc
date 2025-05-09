@@ -7,7 +7,7 @@ namespace Bring2mind.Demo2025Mvc.Demo1.Common
     public void RegisterRoutes(IMapRoute mapRouteManager)
     {
       mapRouteManager.MapRoute(
-          "Bring2mind_Demo1",
+          "Bring2mind/Demo1",
           "MvcPipelineDemo1Map1",
           "{controller}/{action}",
           null,
@@ -15,7 +15,7 @@ namespace Bring2mind.Demo2025Mvc.Demo1.Common
           new[] { "Bring2mind.Demo2025Mvc.Demo1.Controllers" });
 
       mapRouteManager.MapRoute(
-          "Bring2mind_Demo1",
+          "Bring2mind/Demo1",
           "MvcPipelineDemo1Map2",
           "{controller}/{action}/{id}",
           null,
