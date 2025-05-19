@@ -1,11 +1,14 @@
-﻿using DotNetNuke.Web.MvcPipeline.Routing;
+﻿using DotNetNuke.Instrumentation;
+using DotNetNuke.Web.MvcPipeline.Routing;
 
 namespace Bring2mind.Demo2025Mvc.Demo2.Common
 {
   public class RouteConfig : IMvcRouteMapper
   {
+    public static readonly ILog Logger = LoggerSource.Instance.GetLogger(typeof(RouteConfig));
     public void RegisterRoutes(IMapRoute mapRouteManager)
     {
+      Logger.Info("Registering routes for Bring2mind/Demo2");
       mapRouteManager.MapRoute(
           "Bring2mind/Demo2",
           "MvcPipelineDemo2Map1",
