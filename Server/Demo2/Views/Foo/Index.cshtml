@@ -4,8 +4,19 @@
 @{
 }
 
-<h1>Hello Detail 2 Page</h1>
+<h1>Hello Detail Page for @Model.DisplayName in DEMO 2 module with id @Dnn.ActiveModule.ModuleID</h1>
 
-<p>Hi from @Model.DisplayName</p>
+<div>
+  <p>Edit the text below and click save to change your display name</p>
+  <p>
+    @Html.TextBoxFor(m => m.DisplayName)
+  </p>
+  <p>
+    <button type="submit" id="btnSave" class="dnnPrimaryAction">Save</button>
+  </p>
+</div>
 
-<a href="@Url.Action("Index", "Home")">Go back</a>
+<div>
+  <a href="@Url.Action("Index", "Home")">Go back to main page</a>
+</div>
+

@@ -4,12 +4,12 @@
 @{
 }
 
-<h1>Hello Detail Page for @Model.DisplayName in DEMO 1 module with id @Dnn.ActiveModule.ModuleID</h1>
+<h1>The special bar page for demo 1 id @Dnn.ActiveModule.ModuleID</h1>
 
 <div>
-  <p>Edit the text below and click save to change your display name</p>
+  <p>Edit the text below and click save to change your email address</p>
   <p>
-    @Html.TextBoxFor(m => m.DisplayName)
+    @Html.TextBoxFor(m => m.Email)
   </p>
   <p>
     <button type="submit" id="btnSave" class="dnnPrimaryAction">Save</button>

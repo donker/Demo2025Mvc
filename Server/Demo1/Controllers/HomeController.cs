@@ -10,5 +10,11 @@ namespace Bring2mind.Demo2025Mvc.Demo1.Controllers
     {
       return View(Demo1ModuleContext.Settings.View);
     }
+
+    [HttpPost]
+    public ActionResult Index(object foo)
+    {
+      return View(Demo1ModuleContext.Settings.View);
+    }
   }
 }

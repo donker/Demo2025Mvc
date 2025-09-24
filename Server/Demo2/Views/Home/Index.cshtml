@@ -4,6 +4,22 @@
   //Demo2ModuleContext.AddModuleScript();
 }
 
-<h1>Hello Demo2 Module</h1>
+<h1>Hello DEMO 2 Module with ID @Dnn.ActiveModule.ModuleID</h1>
+@if (Dnn.User.UserID > -1)
+{
+  <div>
+    <p>Current User: <span style="font-weight: bold">@Dnn.User.DisplayName</span> with email <span style="font-weight: bold">@Dnn.User.Email</span></p>
+  </div>
+}
 
-<a href="@Url.Action("Index", "Foo", new { UserId = this.Dnn.User.UserID })">Go to detail page</a>
+<div>
+  <button type="submit" id="btn" class="dnnPrimaryAction">Test postback on home page</button>
+</div>
+
+@if (Dnn.User.UserID > -1)
+{
+  <div>
+    <a href="@Url.Action("Index", "Foo", new { UserId = this.Dnn.User.UserID })">Go to your details page</a>
+  </div>
+}
+

@@ -1,12 +1,10 @@
-using Bring2mind.Demo2025Mvc.Demo1.Common;
-using Bring2mind.Demo2025Mvc.Demo1.Models;
+﻿using Bring2mind.Demo2025Mvc.Demo1.Common;
 using DotNetNuke.Entities.Users;
-using System;
 using System.Web.Mvc;
 
 namespace Bring2mind.Demo2025Mvc.Demo1.Controllers
 {
-  public class FooController : Demo1MvcController
+  public class BarController : Demo1MvcController
   {
     [HttpGet]
     public ActionResult Index(int userId)
@@ -16,14 +14,13 @@ namespace Bring2mind.Demo2025Mvc.Demo1.Controllers
     }
 
     [HttpPost]
-    [DotNetNuke.Web.Mvc.Framework.ActionFilters.ValidateAntiForgeryToken]
     public ActionResult Index(int userId, UserInfo data)
     {
-      var newUserDisplayName = data.DisplayName;
+      var newEmail = data.Email;
       var user = UserController.GetUserById(PortalSettings.PortalId, userId);
       if (user != null && user.UserID > 0)
       {
-        user.DisplayName = newUserDisplayName;
+        user.Email = newEmail;
         UserController.UpdateUser(PortalSettings.PortalId, user);
       }
       else
@@ -33,26 +30,6 @@ namespace Bring2mind.Demo2025Mvc.Demo1.Controllers
         return View(data);
       }
       return RedirectToDefaultRoute();
-    }
-
-    [HttpGet]
-    public ActionResult EditTest()
-    {
-      var objectToEdit = new TestObject
-      {
-        AnInteger = 42,
-        FirstString = "Hello",
-        SecondString = "World",
-        ADateAndTime = DateTime.Now
-      };
-      return View(objectToEdit);
-    }
-
-    [HttpPost]
-    [DotNetNuke.Web.Mvc.Framework.ActionFilters.ValidateAntiForgeryToken]
-    public ActionResult EditTest(TestObject editedData)
-    {
-      return View(editedData);
     }
   }
 }

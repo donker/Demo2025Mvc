@@ -1,15 +1,19 @@
-@inherits Demo1WebPage<IUserInfo>
+@inherits Demo1WebPage<TestObject>
 @using DotNetNuke.Abstractions.Users
 @using Bring2mind.Demo2025Mvc.Demo1.Common
+@using Bring2mind.Demo2025Mvc.Demo1.Models
 @{
 }
 
-<h1>Hello Detail Page for @Model.DisplayName in DEMO 1 module with id @Dnn.ActiveModule.ModuleID</h1>
+<h1>This is a test edit page</h1>
 
 <div>
   <p>Edit the text below and click save to change your display name</p>
   <p>
-    @Html.TextBoxFor(m => m.DisplayName)
+    @Html.TextBoxFor(m => m.FirstString)
+  </p>
+  <p>
+    @Html.TextBoxFor(m => m.SecondString)
   </p>
   <p>
     <button type="submit" id="btnSave" class="dnnPrimaryAction">Save</button>
